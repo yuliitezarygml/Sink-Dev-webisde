@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# 📸 Фотогалерея - GHIFrame Studio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Профессиональное веб-приложение для просмотра и управления фотогалереями, созданное на **React + TypeScript + Strapi**.
 
 ## Available Scripts
 

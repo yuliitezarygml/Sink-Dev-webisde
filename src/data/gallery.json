@@ -1,0 +1,74 @@
+{
+  "id": "trofim-daniela-2025",
+  "title": "Trofim și Daniela",
+  "photographerName": "Ion Ghilețchi",
+  "photographerEmail": "ion@ghiframe.studio",
+  "description": "Свадебная фотосессия Трофима и Даниэлы. Профессиональная съемка, захватывающие моменты!",
+  "date": "13.10.2025",
+  "storageUntil": "13.10.2026",
+  "photos": [
+    {
+      "id": "1",
+      "title": "Невеста у окна",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "2",
+      "title": "Невеста в дороге",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1555097462-c2dfc3fbb6b0?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1555097462-c2dfc3fbb6b0?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "3",
+      "title": "Первый взгляд",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "4",
+      "title": "Церемония",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "5",
+      "title": "Первый поцелуй",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "6",
+      "title": "Портрет молодоженов",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1533278552988-d07b94fb141d?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1533278552988-d07b94fb141d?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "7",
+      "title": "Прогулка после церемонии",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "8",
+      "title": "Танец молодых",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&sat=-100",
+      "date": "13.10.2025"
+    },
+    {
+      "id": "9",
+      "title": "Банкет",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1546681528-8eb7c1c6a6a0?w=300&h=300&fit=crop&sat=-100",
+      "fullUrl": "https://images.unsplash.com/photo-1546681528-8eb7c1c6a6a0?w=1200&sat=-100",
+      "date": "13.10.2025"
+    }
+  ]
+}
