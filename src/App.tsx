@@ -18,12 +18,7 @@ function App() {
         const galleries = await galleryApi.getAllGalleries();
 
         if (galleries && galleries.length > 0) {
-          const galleryId = process.env.REACT_APP_GALLERY_ID;
-          const selectedGallery = galleryId
-            ? galleries.find((g: GalleryType) => String(g.id) === galleryId)
-            : galleries[0];
-
-          setGallery(selectedGallery || galleries[0]);
+          setGallery(galleries[0]);
         } else {
           setShowError(true);
         }

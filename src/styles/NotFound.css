@@ -45,7 +45,7 @@
   margin: 0 auto;
   animation: catAnim 1.5s ease forwards;
   z-index: 2;
-  width: 100%;
+  width: 90%;
 }
 
 .error-image img {
@@ -150,7 +150,7 @@
   }
 
   .error-description p {
-    font-size: 20px;
+    font-size: 10px;
   }
 }
 

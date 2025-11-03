@@ -9,9 +9,9 @@ const NotFound: React.FC = () => {
 
   const getErrorMessage = () => {
     if (isErrorPage) {
-      return 'Ошибка подключения к серверу';
+      return 'Ошибка подключения к серверу - сервер не отвечает!';
     }
-    return 'Страница не найдена';
+    return 'Страница не найдена - такой адрес не существует!';
   };
 
   return (
@@ -23,12 +23,12 @@ const NotFound: React.FC = () => {
       </div>
       <div className="error-description">
         <p>{getErrorMessage()}</p>
-        {isErrorPage && (
+        {!isErrorPage && (
           <p style={{ fontSize: '0.9em', opacity: 0.8, marginBottom: '20px' }}>
             Убедитесь, что Strapi сервер запущен на http://localhost:1337
           </p>
         )}
-        <a href="/" className="back-button">Вернуться на главную</a>
+       <a href="/" className="back-button">Вернуться на главную</a>
       </div>
     </div>
   );
