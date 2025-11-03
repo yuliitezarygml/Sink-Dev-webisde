@@ -91,9 +91,6 @@ const Gallery: React.FC<GalleryProps> = ({
                 💾 Хранится до: <strong>{storageUntil}</strong>
               </p>
             </div>
-            <button className="download-btn">
-              ⬇️ Скачать файлы
-            </button>
           </div>
         </div>
 

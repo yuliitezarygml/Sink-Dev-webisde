@@ -21,8 +21,8 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ photo, onClick }) => {
         </div>
       </div>
       <div className="photo-card-info">
-        <h3 className="photo-card-title">{photo.title}</h3>
-        <p className="photo-card-date">{photo.date}</p>
+       {/* <h3 className="photo-card-title">{photo.title}</h3> */}
+        <p className="photo-card-title">{photo.date}</p>
       </div>
     </div>
   );
