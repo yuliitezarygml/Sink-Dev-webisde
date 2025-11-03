@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Photo } from '../types/index';
 import PhotoCard from './PhotoCard';
 import ImageViewerModal from './ImageViewerModal';
+import ContactMenu from './ContactMenu';
 import '../styles/Gallery.css';
 
 interface GalleryProps {
   title: string;
   photos: Photo[];
   photographerName: string;
+  photographerEmail?: string;
   date: string;
   storageUntil: string;
 }
@@ -16,6 +18,7 @@ const Gallery: React.FC<GalleryProps> = ({
   title,
   photos,
   photographerName,
+  photographerEmail,
   date,
   storageUntil,
 }) => {
@@ -117,6 +120,12 @@ const Gallery: React.FC<GalleryProps> = ({
           totalPhotos={photos.length}
         />
       )}
+
+      {/* Меню контактов */}
+      <ContactMenu
+        photographerName={photographerName}
+        photographerEmail={photographerEmail || 'contact@ghiframe.studio'}
+      />
     </div>
   );
 };

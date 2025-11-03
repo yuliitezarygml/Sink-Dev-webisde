@@ -75,6 +75,7 @@ function App() {
           title={gallery.title}
           photos={gallery.photos}
           photographerName={gallery.photographerName || 'Фотограф'}
+          photographerEmail={gallery.photographerEmail || 'contact@ghiframe.studio'}
           date={gallery.date || ''}
           storageUntil={gallery.storageUntil || ''}
         />
