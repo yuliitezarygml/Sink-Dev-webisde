@@ -702,7 +702,7 @@ npm run deploy
 ## 📞 Поддержка
 
 - GitHub Issues: https://github.com/yuliitezarygml/Sink-Dev-webisde/issues
-- Email: your@email.com
+- Email: yuliitezarywork@gmail.com
 
 ---
 
