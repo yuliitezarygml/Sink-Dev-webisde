@@ -1,93 +1,38 @@
 .App {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
-/* Loading State */
-.loader {
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  text-align: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  flex-direction: column;
-  gap: 20px;
 }
 
-/* Новый спиннер - более элегантный */
-.spinner {
-  width: 80px;
-  height: 80px;
-  position: relative;
-  margin: 0 auto;
+.App-link {
+  color: #61dafb;
 }
 
-/* Внешний круг */
-.spinner::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid rgba(102, 126, 234, 0.3);
-  border-radius: 50%;
-  animation: spin 3s linear infinite;
-}
-
-/* Внутренний круг */
-.spinner::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid transparent;
-  border-top: 3px solid #667eea;
-  border-right: 3px solid #764ba2;
-  border-radius: 50%;
-  animation: spin 1.5s linear infinite reverse;
-}
-  
-@keyframes spin {
-  0% {
+@keyframes App-logo-spin {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
-
-.loader p {
-  font-size: 1.3em;
-  margin: 0;
-  font-weight: 500;
-  letter-spacing: 1px;
-  animation: fadeInOut 2s ease-in-out infinite;
-  width: 100%;
-  text-align: center;
-}
-
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-/* Global Styles */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
