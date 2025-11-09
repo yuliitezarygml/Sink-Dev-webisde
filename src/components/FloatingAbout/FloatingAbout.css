@@ -1,0 +1,275 @@
+/* Плавающая кнопка */
+.floating-about__button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-about__button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.floating-about__button:active {
+  transform: scale(0.95);
+}
+
+/* Оверлей */
+.floating-about__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Модальное окно */
+.floating-about__modal {
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.4s ease;
+  border: 2px solid #667eea;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.3),
+              inset 0 0 20px rgba(102, 126, 234, 0.05),
+              0 0 60px rgba(102, 126, 234, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Кнопка закрытия */
+.floating-about__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.floating-about__close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Содержимое модали */
+.floating-about__content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Фото профиля */
+.floating-about__image-wrapper {
+  flex-shrink: 0;
+}
+
+.floating-about__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 2px solid #667eea;
+  box-shadow: 0 0 25px rgba(102, 126, 234, 0.4), 
+              inset 0 0 15px rgba(102, 126, 234, 0.1),
+              0 0 40px rgba(102, 126, 234, 0.3);
+  animation: image-glitch 3s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes image-glitch {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(102, 126, 234, 0.4), 
+                inset 0 0 15px rgba(102, 126, 234, 0.1),
+                0 0 40px rgba(102, 126, 234, 0.3);
+    filter: brightness(1) contrast(1);
+  }
+  25% {
+    box-shadow: -3px 0 rgba(102, 126, 234, 0.6), 
+                3px 0 rgba(245, 87, 108, 0.6),
+                inset 0 0 20px rgba(102, 126, 234, 0.2),
+                0 0 50px rgba(102, 126, 234, 0.5);
+    filter: brightness(1.1) contrast(1.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), 
+                inset 0 0 25px rgba(102, 126, 234, 0.3),
+                0 0 60px rgba(102, 126, 234, 0.4);
+    filter: brightness(1) contrast(1.1);
+  }
+  75% {
+    box-shadow: 2px 0 rgba(245, 87, 108, 0.6), 
+                -2px 0 rgba(102, 126, 234, 0.6),
+                inset 0 0 20px rgba(102, 126, 234, 0.2),
+                0 0 45px rgba(102, 126, 234, 0.4);
+    filter: brightness(1.05) contrast(1.15);
+  }
+}
+
+/* Текстовая часть */
+.floating-about__text {
+  flex: 1;
+}
+
+.floating-about__title {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.floating-about__description {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+/* Статистика */
+.floating-about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.floating-about__stat {
+  text-align: center;
+}
+
+.floating-about__stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #667eea;
+  margin: 0 0 5px 0;
+}
+
+.floating-about__stat-label {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+/* Кнопка связи */
+.floating-about__button-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.floating-about__button-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .floating-about__modal {
+    max-width: 95%;
+    padding: 25px;
+  }
+
+  .floating-about__content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .floating-about__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .floating-about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .floating-about__button {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-about__modal {
+    padding: 20px;
+  }
+
+  .floating-about__title {
+    font-size: 20px;
+  }
+
+  .floating-about__description {
+    font-size: 13px;
+  }
+
+  .floating-about__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-about__image {
+    width: 150px;
+    height: 150px;
+  }
+}
