@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Contact.css';
+import emailjs from 'emailjs-com';
 
 interface ContactData {
   title: string;
@@ -48,6 +49,14 @@ const Contact: React.FC<ContactProps> = ({
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [emailConfig, setEmailConfig] = useState({
+    publicKey: '',
+    serviceId: '',
+    templateId: '',
+    enabled: false
+  });
 
   useEffect(() => {
     fetch('/data/data.json')
@@ -56,8 +65,15 @@ const Contact: React.FC<ContactProps> = ({
         if (data.contact) {
           setContactData(data.contact);
         }
+        if (data.emailjs) {
+          setEmailConfig(data.emailjs);
+          // Инициализация EmailJS с данными из JSON
+          if (data.emailjs.publicKey && data.emailjs.publicKey !== 'YOUR_PUBLIC_KEY') {
+            emailjs.init(data.emailjs.publicKey);
+          }
+        }
       })
-      .catch(error => console.error('Ошибка загрузки Contact данных:', error));
+      .catch(error => console.error('Ошибка загрузки данных:', error));
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -70,12 +86,48 @@ const Contact: React.FC<ContactProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 2000);
+    
+    // Проверка, включена ли отправка email
+    if (!emailConfig.enabled || !emailConfig.serviceId || !emailConfig.templateId) {
+      setError('Сервис отправки писем временно недоступен. Пожалуйста, попробуйте позже.');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+
+    // Параметры для отправки
+    const templateParams = {
+      to_email: contactData.email,
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      reply_to: formData.email
+    };
+
+    emailjs
+      .send(
+        emailConfig.serviceId,
+        emailConfig.templateId,
+        templateParams
+      )
+      .then((response) => {
+        console.log('Email успешно отправлен!', response.status, response.text);
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setLoading(false);
+        
+        // Скрыть сообщение через 3 секунды
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error('Ошибка при отправке:', err);
+        setError('Ошибка при отправке письма. Пожалуйста, попробуйте снова.');
+        setLoading(false);
+      });
   };
 
   return (
@@ -172,10 +224,12 @@ const Contact: React.FC<ContactProps> = ({
 
               <button 
                 type="submit" 
-                className={`contact__submit ${submitted ? 'contact__submit--sent' : ''}`}
+                disabled={loading}
+                className={`contact__submit ${submitted ? 'contact__submit--sent' : ''} ${loading ? 'contact__submit--loading' : ''}`}
               >
-                {submitted ? '✓ Отправлено' : 'Отправить'}
+                {loading ? '⏳ Отправка...' : submitted ? '✓ Отправлено' : 'Отправить'}
               </button>
+              {error && <p className="contact__error">{error}</p>}
             </form>
           </div>
         </div>

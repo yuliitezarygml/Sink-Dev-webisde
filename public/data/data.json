@@ -1,4 +1,10 @@
 {
+  "emailjs": {
+    "publicKey": "FCEo_4o9N1sPRnfRM",
+    "serviceId": "service_1v0pkb1",
+    "templateId": "template_8kt0r5q",
+    "enabled": false
+  },
   "hero": {
     "date": "13.10.2025",
     "names": {
@@ -15,9 +21,9 @@
     "email": "info@example.com",
     "phone": "+373 69 123 456",
     "social": [
-      { "name": "Instagram", "url": "#" },
-      { "name": "Facebook", "url": "#" },
-      { "name": "WhatsApp", "url": "#" }
+      { "name": "Instagram", "url": "https://instagram.com" },
+      { "name": "Facebook", "url": "https://facebook.com" },
+      { "name": "WhatsApp", "url": "https://wa.me/YOUR_PHONE" }
     ],
     "copyright": "© 2025 Photography Portfolio. Все права защищены."
   },
