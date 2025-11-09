@@ -67,7 +67,6 @@ const Contact: React.FC<ContactProps> = ({
         }
         if (data.emailjs) {
           setEmailConfig(data.emailjs);
-          // Инициализация EmailJS с данными из JSON
           if (data.emailjs.publicKey && data.emailjs.publicKey !== 'YOUR_PUBLIC_KEY') {
             emailjs.init(data.emailjs.publicKey);
           }
@@ -87,7 +86,6 @@ const Contact: React.FC<ContactProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Проверка, включена ли отправка email
     if (!emailConfig.enabled || !emailConfig.serviceId || !emailConfig.templateId) {
       setError('Сервис отправки писем временно недоступен. Пожалуйста, попробуйте позже.');
       return;
@@ -96,7 +94,6 @@ const Contact: React.FC<ContactProps> = ({
     setLoading(true);
     setError('');
 
-    // Параметры для отправки
     const templateParams = {
       to_email: contactData.email,
       from_name: formData.name,
@@ -118,7 +115,6 @@ const Contact: React.FC<ContactProps> = ({
         setFormData({ name: '', email: '', subject: '', message: '' });
         setLoading(false);
         
-        // Скрыть сообщение через 3 секунды
         setTimeout(() => {
           setSubmitted(false);
         }, 3000);

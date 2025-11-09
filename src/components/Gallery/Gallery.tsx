@@ -28,7 +28,6 @@ const Gallery: React.FC<GalleryProps> = ({
   });
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryPhoto | null>(null);
 
-  // Загружаем фото из JSON файла
   useEffect(() => {
     fetch('/data/data.json')
       .then(response => response.json())
@@ -66,7 +65,6 @@ const Gallery: React.FC<GalleryProps> = ({
         </div>
       </div>
 
-      {/* Модальное окно для просмотра фото */}
       {selectedPhoto && (
         <div 
           className="gallery__modal"
