@@ -1,0 +1,348 @@
+{
+  "hero": {
+    "date": "13.10.2025",
+    "names": {
+      "first": "eveniment",
+      "second": "usarb"
+    },
+    "photographer": "balti it",
+    "studio": "nortek",
+    "backgroundImage": "/photos/IMG_0225.jpg"
+  },
+  "contact": {
+    "title": "Свяжитесь со мной",
+    "subtitle": "Давайте создадим что-то прекрасное вместе",
+    "email": "info@example.com",
+    "phone": "+373 69 123 456",
+    "social": [
+      { "name": "Instagram", "url": "#" },
+      { "name": "Facebook", "url": "#" },
+      { "name": "WhatsApp", "url": "#" }
+    ],
+    "copyright": "© 2025 Photography Portfolio. Все права защищены."
+  },
+  "about": {
+    "title": "Обо мне",
+    "description": "Профессиональный фотограф с многолетним опытом. Мы специализируемся на свадебной фотографии, портретах и событиях.",
+    "profileImage": "/photos/photo_2025-11-09_15-38-07.jpg",
+    "stats": [
+      { "label": "Лет опыта", "value": "3" },
+      { "label": "Проектов", "value": "30" },
+      { "label": "Довольных клиентов", "value": "100" }
+    ]
+  },
+  "photos": [
+    {
+      "id": 1,
+      "src": "/photos/IMG_0006.jpg",
+      "alt": "Фото 1",
+      "category": "Портреты"
+    },
+    {
+      "id": 2,
+      "src": "/photos/IMG_0015.jpg",
+      "alt": "Фото 2",
+      "category": "Портреты"
+    },
+    {
+      "id": 3,
+      "src": "/photos/IMG_0024.jpg",
+      "alt": "Фото 3",
+      "category": "Портреты"
+    },
+    {
+      "id": 4,
+      "src": "/photos/IMG_0037.jpg",
+      "alt": "Фото 4",
+      "category": "Портреты"
+    },
+    {
+      "id": 5,
+      "src": "/photos/IMG_0061.jpg",
+      "alt": "Фото 5",
+      "category": "Портреты"
+    },
+    {
+      "id": 6,
+      "src": "/photos/IMG_0067.jpg",
+      "alt": "Фото 6",
+      "category": "Портреты"
+    },
+    {
+      "id": 7,
+      "src": "/photos/IMG_0077.jpg",
+      "alt": "Фото 7",
+      "category": "Портреты"
+    },
+    {
+      "id": 8,
+      "src": "/photos/IMG_0079.jpg",
+      "alt": "Фото 8",
+      "category": "Портреты"
+    },
+    {
+      "id": 9,
+      "src": "/photos/IMG_0086.jpg",
+      "alt": "Фото 9",
+      "category": "Портреты"
+    },
+    {
+      "id": 10,
+      "src": "/photos/IMG_0089.jpg",
+      "alt": "Фото 10",
+      "category": "Портреты"
+    },
+    {
+      "id": 11,
+      "src": "/photos/IMG_0104.jpg",
+      "alt": "Фото 11",
+      "category": "Портреты"
+    },
+    {
+      "id": 12,
+      "src": "/photos/IMG_0106.jpg",
+      "alt": "Фото 12",
+      "category": "Портреты"
+    },
+    {
+      "id": 13,
+      "src": "/photos/IMG_0108.jpg",
+      "alt": "Фото 13",
+      "category": "Портреты"
+    },
+    {
+      "id": 14,
+      "src": "/photos/IMG_0113.jpg",
+      "alt": "Фото 14",
+      "category": "Портреты"
+    },
+    {
+      "id": 15,
+      "src": "/photos/IMG_0116.jpg",
+      "alt": "Фото 15",
+      "category": "Портреты"
+    },
+    {
+      "id": 16,
+      "src": "/photos/IMG_0127.jpg",
+      "alt": "Фото 16",
+      "category": "Портреты"
+    },
+    {
+      "id": 17,
+      "src": "/photos/IMG_0137.jpg",
+      "alt": "Фото 17",
+      "category": "Портреты"
+    },
+    {
+      "id": 18,
+      "src": "/photos/IMG_0140.jpg",
+      "alt": "Фото 18",
+      "category": "Портреты"
+    },
+    {
+      "id": 19,
+      "src": "/photos/IMG_0155.jpg",
+      "alt": "Фото 19",
+      "category": "Портреты"
+    },
+    {
+      "id": 20,
+      "src": "/photos/IMG_0157.jpg",
+      "alt": "Фото 20",
+      "category": "Портреты"
+    },
+    {
+      "id": 21,
+      "src": "/photos/IMG_0174.jpg",
+      "alt": "Фото 21",
+      "category": "Портреты"
+    },
+    {
+      "id": 22,
+      "src": "/photos/IMG_0178.jpg",
+      "alt": "Фото 22",
+      "category": "Портреты"
+    },
+    {
+      "id": 23,
+      "src": "/photos/IMG_0180.jpg",
+      "alt": "Фото 23",
+      "category": "Портреты"
+    },
+    {
+      "id": 24,
+      "src": "/photos/IMG_0183.jpg",
+      "alt": "Фото 24",
+      "category": "Портреты"
+    },
+    {
+      "id": 25,
+      "src": "/photos/IMG_0190.jpg",
+      "alt": "Фото 25",
+      "category": "Портреты"
+    },
+    {
+      "id": 26,
+      "src": "/photos/IMG_0193.jpg",
+      "alt": "Фото 26",
+      "category": "Портреты"
+    },
+    {
+      "id": 27,
+      "src": "/photos/IMG_0196.jpg",
+      "alt": "Фото 27",
+      "category": "Портреты"
+    },
+    {
+      "id": 28,
+      "src": "/photos/IMG_0198.jpg",
+      "alt": "Фото 28",
+      "category": "Портреты"
+    },
+    {
+      "id": 29,
+      "src": "/photos/IMG_0206.jpg",
+      "alt": "Фото 29",
+      "category": "Портреты"
+    },
+    {
+      "id": 30,
+      "src": "/photos/IMG_0210.jpg",
+      "alt": "Фото 30",
+      "category": "Портреты"
+    },
+    {
+      "id": 31,
+      "src": "/photos/IMG_0225.jpg",
+      "alt": "Фото 31",
+      "category": "Портреты"
+    },
+    {
+      "id": 32,
+      "src": "/photos/IMG_0228.jpg",
+      "alt": "Фото 32",
+      "category": "Портреты"
+    },
+    {
+      "id": 33,
+      "src": "/photos/IMG_0232.jpg",
+      "alt": "Фото 33",
+      "category": "Портреты"
+    },
+    {
+      "id": 34,
+      "src": "/photos/IMG_0240.jpg",
+      "alt": "Фото 34",
+      "category": "Портреты"
+    },
+    {
+      "id": 35,
+      "src": "/photos/IMG_0242.jpg",
+      "alt": "Фото 35",
+      "category": "Портреты"
+    },
+    {
+      "id": 36,
+      "src": "/photos/IMG_0244.jpg",
+      "alt": "Фото 36",
+      "category": "Портреты"
+    },
+    {
+      "id": 37,
+      "src": "/photos/IMG_0249.jpg",
+      "alt": "Фото 37",
+      "category": "Портреты"
+    },
+    {
+      "id": 38,
+      "src": "/photos/IMG_0252.jpg",
+      "alt": "Фото 38",
+      "category": "Портреты"
+    },
+    {
+      "id": 39,
+      "src": "/photos/IMG_0259.jpg",
+      "alt": "Фото 39",
+      "category": "Портреты"
+    },
+    {
+      "id": 40,
+      "src": "/photos/IMG_0262.jpg",
+      "alt": "Фото 40",
+      "category": "Портреты"
+    },
+    {
+      "id": 41,
+      "src": "/photos/IMG_0272.jpg",
+      "alt": "Фото 41",
+      "category": "Портреты"
+    },
+    {
+      "id": 42,
+      "src": "/photos/IMG_0277.jpg",
+      "alt": "Фото 42",
+      "category": "Портреты"
+    },
+    {
+      "id": 43,
+      "src": "/photos/IMG_0287.jpg",
+      "alt": "Фото 43",
+      "category": "Портреты"
+    },
+    {
+      "id": 44,
+      "src": "/photos/IMG_0290.jpg",
+      "alt": "Фото 44",
+      "category": "Портреты"
+    },
+    {
+      "id": 45,
+      "src": "/photos/IMG_0299.jpg",
+      "alt": "Фото 45",
+      "category": "Портреты"
+    },
+    {
+      "id": 46,
+      "src": "/photos/IMG_0302.jpg",
+      "alt": "Фото 46",
+      "category": "Портреты"
+    },
+    {
+      "id": 47,
+      "src": "/photos/IMG_0304.jpg",
+      "alt": "Фото 47",
+      "category": "Портреты"
+    },
+    {
+      "id": 48,
+      "src": "/photos/IMG_0307.jpg",
+      "alt": "Фото 48",
+      "category": "Портреты"
+    },
+    {
+      "id": 49,
+      "src": "/photos/IMG_0315.jpg",
+      "alt": "Фото 49",
+      "category": "Портреты"
+    },
+    {
+      "id": 50,
+      "src": "/photos/IMG_0340.jpg",
+      "alt": "Фото 50",
+      "category": "Портреты"
+    },
+    {
+      "id": 51,
+      "src": "/photos/IMG_0343.jpg",
+      "alt": "Фото 51",
+      "category": "Портреты"
+    },
+    {
+      "id": 52,
+      "src": "/photos/IMG_0345.jpg",
+      "alt": "Фото 52",
+      "category": "Портреты"
+    }
+  ]
+}
