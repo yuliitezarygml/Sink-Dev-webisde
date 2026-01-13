@@ -1,46 +1,107 @@
-# Getting Started with Create React App
+# Photography Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Портфолио фотографа, созданное на React с TypeScript. Приложение демонстрирует фотографии, информацию о фотографе и предоставляет контактную форму.
 
-## Available Scripts
+## Функционал
 
-In te project directory, you can run:
+### Основные компоненты
 
-### `npm start`
+- **Hero секция**: Отображает дату события, имена участников, имя фотографа, студию и фоновое изображение. Данные загружаются из `public/data/data.json`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Галерея фотографий**: Адаптивная сетка изображений с категориями. Поддерживает модальный просмотр фото при клике. Изображения хранятся в `public/photos/`, данные в JSON.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Модальное окно "Обо мне" (FloatingAbout)**: Содержит описание фотографа, фото профиля и статистику (опыт, проекты, клиенты).
 
-### `npm test`
-aslkdlkajdlkjalksjdlkjaslkdj
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Модальное окно контактов (FloatingContact)**: Контактная форма с полями для имени, email, темы и сообщения. Также отображает email, телефон и социальные сети.
 
-### `npm run build`
+- **Плавающее меню (FloatingMenu)**: Компонент для навигации (в данный момент закомментирован в `App.tsx`).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Дополнительные возможности
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Адаптивный дизайн**: Галерея автоматически подстраивается под размер экрана (от 1 колонки на мобильных до нескольких на десктопе).
+- **Анимации**: Плавные переходы при наведении на фото, модальные окна с fade-in эффектом.
+- **Обработка изображений**: Скрипт `start.bat` использует FFmpeg для масштабирования фото до 1280px ширины.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Структура проекта
 
-### `npm run eject`
+```
+src/
+├── components/
+│   ├── Hero/           # Заглавная секция
+│   ├── Gallery/        # Галерея фото
+│   ├── FloatingAbout/  # Модальное окно "Обо мне"
+│   ├── FloatingContact/# Модальное окно контактов
+│   └── FloatingMenu/   # Плавающее меню
+├── App.tsx            # Главный компонент
+└── index.tsx          # Точка входа
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+public/
+├── data/
+│   └── data.json      # Данные для компонентов
+├── photos/            # Изображения
+└── index.html         # HTML-шаблон
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Запуск проекта
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Требования
+- Node.js (версия 14 или выше)
+- npm или yarn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Установка зависимостей
+```bash
+npm install
+```
 
-## Learn More
+### Запуск в режиме разработки
+```bash
+npm start
+```
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Сборка для продакшена
+```bash
+npm run build
+```
+Собранные файлы появятся в папке `build`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Тестирование
+```bash
+npm test
+```
+
+## Настройка данных
+
+Все текстовые данные и ссылки на изображения хранятся в `public/data/data.json`. Структура:
+
+- `hero`: данные для заглавной секции
+- `contact`: контактная информация
+- `about`: информация о фотографе
+- `photos`: массив объектов с фото (id, src, alt, category)
+
+Измените этот файл для обновления контента.
+
+## Обработка изображений
+
+Для подготовки фото используйте `start.bat`:
+- Поместите оригиналы в папку `photo/`
+- Запустите скрипт: двойной клик по `start.bat`
+- Обработанные фото появятся в `photo_resized/` с шириной 1280px
+
+Требуется установленный FFmpeg.
+
+## Технологии
+
+- **React 19** с TypeScript
+- **React Router** для маршрутизации
+- **CSS Grid** для адаптивной галереи
+- **Create React App** как основа проекта
+- **Jest** и **Testing Library** для тестирования
+
+## Разработка
+
+Проект использует стандартные скрипты CRA. Для кастомизации стилей редактируйте CSS-файлы в папках компонентов.
+
+## Лицензия
+
+© 2025 Photography Portfolio. Все права защищены.
