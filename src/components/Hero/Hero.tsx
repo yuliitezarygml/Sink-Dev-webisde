@@ -9,7 +9,6 @@ interface HeroProps {
   };
   photographer?: string;
   studio?: string;
-  studioLink?: string;
   backgroundImage?: string;
 }
 
@@ -17,8 +16,7 @@ const Hero: React.FC<HeroProps> = ({
   date,
   names,
   photographer,
-  studio,
-  studioLink = 'https://ghiframe.studio'
+  studio
 }) => {
   const [heroData, setHeroData] = useState({
     date: date || '13.10.2025',
@@ -36,7 +34,6 @@ const Hero: React.FC<HeroProps> = ({
           setHeroData(data.hero);
         }
       })
-      .catch(error => console.error('Ошибка загрузки Hero данных:', error));
   }, []);
   return (
     <section className="hero">
@@ -61,9 +58,7 @@ const Hero: React.FC<HeroProps> = ({
           <div className="hero__photographer">
             <p>Fotograf {heroData.photographer}</p>
             <p>|</p>
-            <a href={studioLink} target="_blank" rel="noopener noreferrer">
-              {heroData.studio}
-            </a>
+            <p>{heroData.studio}</p>
           </div>
           
           <div className="hero__scroll">

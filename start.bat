@@ -10,3 +10,4 @@ for %%i in ("%input_dir%\*.jpg", "%input_dir%\*.jpeg", "%input_dir%\*.png") do (
 )
 
 pause
+     

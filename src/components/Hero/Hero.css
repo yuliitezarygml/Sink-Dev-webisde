@@ -55,7 +55,8 @@
 
 /* Дата */
 .hero__date {
-  font-size: 14px;
+  color: #cccccc;
+  font-size: 44px;
   letter-spacing: 2px;
   margin-bottom: 40px;
   opacity: 0.8;

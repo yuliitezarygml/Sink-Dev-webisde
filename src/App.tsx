@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
-import Hero from './components/Hero/Hero';
-import Gallery from './components/Gallery/Gallery';
-import FloatingAbout from './components/FloatingAbout/FloatingAbout';
-import FloatingContact from './components/FloatingContact/FloatingContact';
-import FloatingMenu from './components/FloatingMenu/FloatingMenu';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Landing from './pages/Landing';
+import GalleryPage from './pages/GalleryPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import LoginPage from './components/Auth/LoginPage';
+import RegisterPage from './components/Auth/RegisterPage';
+import './App.css';
 
 function App() {
-  const [aboutOpen, setAboutOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
-
   return (
-    <div className="App">
-      <Hero />
-      <Gallery />
-      
-      {/* Модальные окна */}
-      <FloatingAbout isOpen={aboutOpen} onClose={() => setAboutOpen(false)} />
-      <FloatingContact isOpen={contactOpen} onClose={() => setContactOpen(false)} />
-      
-      {/* Плавающее меню */}
-      <FloatingMenu 
-        onAboutClick={() => setAboutOpen(true)}
-        onContactClick={() => setContactOpen(true)}
-      />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main className="main-content"> {/* Обертка для основного контента */}
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            
+  <Route path="/login" element={<LoginPage />} />
+  <Route path="/register" element={<RegisterPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

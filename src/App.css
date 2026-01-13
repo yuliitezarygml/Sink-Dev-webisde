@@ -1,4 +1,3 @@
-/* Global App Styles - Глобальные стили приложения */
 
 * {
   margin: 0;
@@ -27,7 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Общие стили для текста */
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
 }
@@ -41,7 +39,6 @@ a {
   text-decoration: none;
 }
 
-/* Скроллбар стилизация */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
